@@ -29,7 +29,7 @@ github:
   username: NasriAnis # change to your GitHub username
 
 twitter:
-  username: twitter_username # change to your Twitter username
+  username: Nasri Anis # change to your Twitter username
 
 social:
   # Change to your full name.
@@ -38,11 +38,11 @@ social:
   email: nasrianis213@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
+    #- https://twitter.com/username # change to your Twitter homepage
     - https://github.com/NasriAnis # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/nasri-anis-55876332b/
 
 # Site Verification Settings
 webmaster_verifications:
