@@ -3,9 +3,14 @@
 icon: fas fa-info-circle
 order: 4
 ---
+I developed an early interest in technology and computers, which naturally evolved into a fascination with how systems operate and how they can be secured. This curiosity led me to pursue cybersecurity, particularly from an offensive perspective, where I could understand not just how systems work, but how they fail.
 
-I have always been fascinated by the raw complexity of computers, their inner workings, and the challenge of securing them through an offensive lens. Operating from my Ubuntu host, I spend my time diving into low-level internals to understand the machine from the instruction level up, as I believe true mastery only comes from knowing how the hardware and software communicate at the most fundamental level. This curiosity drives me into the depths of reverse engineering and exploit development; and while I consider myself to be in a continuous learning stage, I am dedicated to mastering new concepts and practicing every single day to sharpen my technical intuition.
+I specialize in offensive security with a focus on reverse engineering and exploit development. My work involves analyzing systems at the instruction level to understand how hardware and software interact, which I believe is essential for identifying and exploiting vulnerabilities.
 
-I have found a true passion for deconstructing binaries and analyzing decompiled code to uncover the hidden logic within it.
+I dedicate significant time to low-level system analysis, binary reverse engineering, and low-level programming. My approach involves understanding computer internals—from processor architecture and memory management to how the operating system interfaces with hardware—to build a comprehensive foundation for security research. I focus on deconstructing compiled code to understand its underlying logic and uncover potential security weaknesses.
 
-I hope this platform serves as a place to connect with like-minded researchers and exchange knowledge.
+My technical interests span assembly language, system programming, and the inner workings of operating systems. I study how computers execute instructions, manage resources, and handle data at the lowest levels, as this knowledge directly informs my ability to identify exploitable conditions. I'm also actively exploring mobile application reverse engineering, analyzing how mobile apps function and where security weaknesses may exist. While I'm continuously developing my skills in this field, I maintain a disciplined practice of daily research and hands-on experimentation.
+
+My primary areas of focus include binary analysis, program reverse engineering, mobile application security, exploit development, low-level programming, and understanding system internals from an attacker's perspective. I use this platform to document my research, share technical insights, and collaborate with other security researchers.
+
+Thank you for visiting, and feel free to reach out if you'd like to discuss research or collaborate on projects.
