@@ -81,7 +81,7 @@ if(x == 4){
 
 this C code will be translated to :
 
-```assembly
+```
 mov RAX, x
 cmp RAX, 4
 jne 5       ; Line 5 (ret)
@@ -295,7 +295,7 @@ result = MyFunction(1, 2, 3, 4, 5, 6);
 ```
 
 
-```assembly
+```
 ; Caller prepares the call
 sub rsp, 0x28          ; Allocate shadow space (32 bytes) + alignment
 mov dword ptr [rsp+0x20], 6   ; 6th parameter on stack
@@ -374,7 +374,7 @@ Low Memory (0x0000...)
 
 **PUSH Instruction:**
 
-```assembly
+```
 push rax           ; Equivalent to:
                    ; sub rsp, 8
                    ; mov [rsp], rax
@@ -385,7 +385,7 @@ push rax           ; Equivalent to:
 
 **POP Instruction:**
 
-```assembly
+```
 pop rax            ; Equivalent to:
                    ; mov rax, [rsp]
                    ; add rsp, 8
@@ -396,7 +396,7 @@ pop rax            ; Equivalent to:
 
 **Example Stack Usage:**
 
-```assembly
+```
 push rbx           ; Save RBX (RSP = RSP - 8)
 push rcx           ; Save RCX (RSP = RSP - 8)
 ; ... do work ...
@@ -447,7 +447,7 @@ Low Memory
 
 **Prologue (Function Entry):** The prologue sets up the stack frame at the beginning of a function.
 
-```assembly
+```
 ; Standard prologue
 push rbp              ; Save caller's base pointer
 mov rbp, rsp          ; Set up new base pointer
@@ -463,7 +463,7 @@ sub rsp, 0x40         ; Allocate space for locals (64 bytes)
 
 **Epilogue (Function Exit):** The epilogue tears down the stack frame before returning.
 
-```assembly
+```
 ; Standard epilogue
 mov rsp, rbp          ; Restore stack pointer (deallocate locals)
 pop rbp               ; Restore caller's base pointer
@@ -472,7 +472,7 @@ ret                   ; Return to caller
 
 Alternatively, you can use the `leave` instruction which combines the first two steps:
 
-```assembly
+```
 leave                 ; Equivalent to: mov rsp, rbp; pop rbp
 ret
 ```
@@ -494,7 +494,7 @@ int Add(int a, int b, int c, int d, int e) {
 }
 ```
 
-```assembly
+```
 Add:
     ; === PROLOGUE ===
     push rbp              ; Save caller's RBP
@@ -529,7 +529,7 @@ void ProcessData(int x, int y) {
 }
 ```
 
-```assembly
+```
 ProcessData:
     ; === PROLOGUE ===
     push rbp
@@ -581,7 +581,7 @@ You might wonder why we use RBP when we could just use RSP with offsets. Here ar
 
 **Example of RSP instability:**
 
-```assembly
+```
 mov rsp, rbp
 sub rsp, 0x20         ; RSP now at RBP-0x20
 
@@ -596,7 +596,7 @@ mov eax, [rbp-0x08]   ; Always works, regardless of PUSH/POP
 
 A **leaf function** is a function that doesn't call any other functions. These can sometimes skip the prologue/epilogue:
 
-```assembly
+```
 SimpleAdd:
     ; No prologue needed - we don't modify stack
     mov eax, ecx          ; EAX = first parameter
@@ -618,7 +618,7 @@ Stack alignment is crucial for performance and correctness, especially with SIMD
 
 **Example:**
 
-```assembly
+```
 ; At function entry: RSP is 16-byte aligned + 8 (from CALL)
 push rbp              ; RSP now 16-byte aligned
 mov rbp, rsp          
@@ -631,14 +631,14 @@ call SomeFunction     ; CALL will push 8 bytes, making it 16-byte aligned
 
 **Common mistake:**
 
-```assembly
+```
 sub rsp, 0x18         ; Allocates 24 bytes - NOT 16-byte aligned!
 ; This will cause issues with aligned memory operations
 ```
 
 **Correct:**
 
-```assembly
+```
 sub rsp, 0x20         ; Allocates 32 bytes - maintains alignment
 ```
 
@@ -681,7 +681,7 @@ When the function returns, it will jump to the corrupted return address, potenti
 
 **Stack Canaries:**
 
-```assembly
+```
 ; Function prologue with canary
 mov rax, [security_cookie]    ; Load canary value
 mov [rbp-0x08], rax           ; Place on stack
@@ -706,7 +706,7 @@ When reverse engineering, here's what to look for:
 
 **Example Analysis:**
 
-```assembly
+```
 MyFunction:
     push rbp              ; Function start marker
     mov rbp, rsp
