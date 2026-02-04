@@ -294,6 +294,7 @@ int MyFunction(int a, int b, int c, int d, int e, int f);
 result = MyFunction(1, 2, 3, 4, 5, 6);
 ```
 
+
 ```assembly
 ; Caller prepares the call
 sub rsp, 0x28          ; Allocate shadow space (32 bytes) + alignment
