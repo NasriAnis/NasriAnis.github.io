@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Understanding HTTP and the Worl Wide Web"
-date: 2026-01-28
+date: 2026-02-15
 categories: [Networking]
 tags: [Networking]
 description: "A dive into HTTP and the WWW, explaining the protocols, standards, and techniques that make modern web applications possible."
