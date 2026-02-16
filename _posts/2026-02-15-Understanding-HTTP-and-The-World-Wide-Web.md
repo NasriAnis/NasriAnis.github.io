@@ -1,3 +1,12 @@
+---
+layout: post
+title: "Understanding HTTP and the Worl Wide Web"
+date: 2026-01-28
+categories: [Networking]
+tags: [Networking]
+description: "A dive into HTTP and the WWW, explaining the protocols, standards, and techniques that make modern web applications possible."
+---
+
 ## The World Wide Web
 
 The **World Wide Web** (also known as **WWW**, **W3**, or simply the **Web**) is a public interconnected information system that enables content sharing over the Internet. It facilitates access to documents and other web resources according to specific rules of the [Hypertext Transfer Protocol](https://en.wikipedia.org/wiki/HTTP "HTTP") (HTTP).
