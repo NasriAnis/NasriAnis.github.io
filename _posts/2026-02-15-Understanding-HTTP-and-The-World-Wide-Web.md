@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Understanding HTTP and the Worl Wide Web"
+title: "Understanding HTTP and the World Wide Web"
 date: 2026-02-15
 categories: [Networking]
 tags: [Networking]
