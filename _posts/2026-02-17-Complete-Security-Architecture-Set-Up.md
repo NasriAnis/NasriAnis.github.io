@@ -48,7 +48,7 @@ You can install Containerlab on your **host** or a **VM** (recommended). Follow 
 	- Import `docker import cEOS-lab-4.35.1F.tar.xz ceos`
 ![](../assets/img/posts/Pasted%20image%2020260214123023.png)
 
-5. Build `the alpine linux` images from the docker files [there](../assets/SecurityArch-Files/Alpine-dockerfiles/alpine-host.dockerfile) and [there](../assets/SecurityArch-Files/Alpine-dockerfiles/alpine-server.dockerfile) 
+5. Build `the alpine linux` images from the docker files [there](/assets/SecurityArch-Files/Alpine-dockerfiles/alpine-host.dockerfile) and [there](/assets/SecurityArch-Files/Alpine-dockerfiles/alpine-server.dockerfile) 
 	- Build `sudo docker build -t alpine-host -f alpine-host.dockerfile .` 
 ![](../assets/img/posts/Pasted%20image%2020260214123259.png)
 
